@@ -1,0 +1,20 @@
+# Private working notes — stay on this machine, off the public repo
+PROJECT_BRIEF.md
+CLAUDE.md
+LAUNCH_CHECKLIST.md
+DEPLOY.md
+notes/
+
+# Review screenshots — regenerate any time with: node tools/review.js
+tools/shots/
+
+# Editor & OS files
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Drafts & backups
+*.bak
+*.tmp
+drafts/
