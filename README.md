@@ -2,7 +2,7 @@
 
 **AI Agentic Developer · Gamer · Bodybuilder · PC Builder**
 
-Personal website: **https://YOUR-USERNAME.github.io**
+Personal website: **https://yushu.github.io**
 
 A single-page site with a black-and-gold luxury design, built with plain HTML, CSS and
 JavaScript — no frameworks, no build step, no dependencies — and hosted free on GitHub Pages.
@@ -11,6 +11,7 @@ JavaScript — no frameworks, no build step, no dependencies — and hosted free
 
 - LinkedIn: [yushu-singh-817420222](https://www.linkedin.com/in/yushu-singh-817420222)
 - Instagram: [@the_only_yushu](https://www.instagram.com/the_only_yushu)
+- GitHub: [@yushu](https://github.com/yushu)
 - Email: ysyushusingh@gmail.com
 
 ---
@@ -85,7 +86,7 @@ git add . && git commit -m "Update" && git push
 
 ### Open items
 
-- [ ] GitHub username → fill into this README's URL and the **IX — Contact** link in `index.html`
+- [x] GitHub username → `yushu`, wired into this README and the **IX — Contact** link
 - [ ] Profile photo (optional) → drop `assets/yushu.jpg` in; About swaps automatically (see `assets/README.md`)
 - [ ] Bodybuilding details: years training, split, PRs, goals (`TODO` in **IV — The Discipline**)
 - [ ] PC build specs → "The Rig" in **III — The Arena**, where it says *Full specs — coming soon*
