@@ -17,6 +17,12 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const PORT = Number(process.argv[2]) || 5173;
+// Loopback only: the folder also holds private notes (PROJECT_BRIEF.md etc.),
+// so the preview must never be reachable from other devices on the network.
+const HOST = '127.0.0.1';
+// Gitignored working notes are never served, even locally.
+// Matched against the path relative to the project root, with forward slashes.
+const PRIVATE = /^(PROJECT_BRIEF|CLAUDE|DEPLOY|LAUNCH_CHECKLIST)\.md$|^(\.git|notes|drafts|tools\/shots)(\/|$)/i;
 
 const TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -35,12 +41,15 @@ const TYPES = {
 };
 
 http.createServer((req, res) => {
-  let rel = decodeURIComponent(req.url.split('?')[0]);
+  let rel;
+  try { rel = decodeURIComponent(req.url.split('?')[0]); }
+  catch (e) { res.writeHead(400).end('Bad request'); return; }
   if (rel.endsWith('/')) rel += 'index.html';
 
   const file = path.join(ROOT, rel);
-  // never serve outside the project directory
-  if (!file.startsWith(ROOT)) {
+  const inside = path.relative(ROOT, file).split(path.sep).join('/');
+  // never serve outside the project directory, nor the private notes inside it
+  if (!file.startsWith(ROOT + path.sep) || PRIVATE.test(inside)) {
     res.writeHead(403).end('Forbidden');
     return;
   }
@@ -58,7 +67,7 @@ http.createServer((req, res) => {
     res.end(buf);
     console.log('200 ' + rel);
   });
-}).listen(PORT, () => {
+}).listen(PORT, HOST, () => {
   console.log(`\n  Yushu Singh — serving ${ROOT}`);
   console.log(`  http://localhost:${PORT}\n`);
   console.log('  Ctrl+C to stop.\n');
