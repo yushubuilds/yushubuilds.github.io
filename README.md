@@ -2,7 +2,7 @@
 
 **AI Agentic Developer · Gamer · Bodybuilder · PC Builder**
 
-Personal website: **https://yushu.github.io**
+Personal website: **https://yushubuilds.github.io**
 
 A single-page site with a black-and-gold luxury design, built with plain HTML, CSS and
 JavaScript — no frameworks, no build step, no dependencies — and hosted free on GitHub Pages.
@@ -11,7 +11,7 @@ JavaScript — no frameworks, no build step, no dependencies — and hosted free
 
 - LinkedIn: [yushu-singh-817420222](https://www.linkedin.com/in/yushu-singh-817420222)
 - Instagram: [@the_only_yushu](https://www.instagram.com/the_only_yushu)
-- GitHub: [@yushu](https://github.com/yushu)
+- GitHub: [@yushubuilds](https://github.com/yushubuilds)
 - Email: ysyushusingh@gmail.com
 
 ---
